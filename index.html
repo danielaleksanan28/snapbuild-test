@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Снэпбилд · конструктор иллюстраций</title>
+<meta name="description" content="Автоматическая сборка векторных композиций из готовой библиотеки SVG-иллюстраций">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">◆</span>
+    <div>
+      <div class="brand-name">Снэпбилд · конструктор</div>
+      <div class="brand-sub">Композиции только из 20 исходных SVG-иллюстраций</div>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button class="btn ghost" id="undo" title="Отменить (Ctrl+Z)">↶</button>
+    <button class="btn ghost" id="redo" title="Повторить (Ctrl+Shift+Z)">↷</button>
+    <button class="btn primary" id="export">Скачать SVG</button>
+  </div>
+</header>
+
+<main class="layout">
+  <!-- Левая панель: сценарии и настройки -->
+  <aside class="panel left">
+    <section class="block">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="idea" role="tab">По заголовку</button>
+        <button class="tab" data-tab="list" role="tab">По списку</button>
+      </div>
+      <div class="tab-body" data-body="idea">
+        <label class="lbl" for="idea">Заголовок или метафора</label>
+        <textarea id="idea" rows="2" placeholder="Например: Как накопить на отпуск">Как накопить на отпуск</textarea>
+        <div class="chips" id="idea-examples"></div>
+      </div>
+      <div class="tab-body hidden" data-body="list">
+        <label class="lbl" for="list">Названия объектов через запятую</label>
+        <textarea id="list" rows="2" placeholder="лампа, книга, ручка, фон: наушники">книга, телефон, пазл, наушники, фон: лампа</textarea>
+        <p class="hint">Доступно: книга, телефон, пазл, монета, наушники, лампа, цветы, кошелёк, папка, ручка. Префикс «фон:» — монохромная версия.</p>
+      </div>
+      <div class="row">
+        <button class="btn primary wide" id="build">Собрать композицию</button>
+        <button class="btn" id="variant" title="Другая раскладка тех же объектов">Ещё вариант</button>
+      </div>
+      <div id="explain" class="explain" aria-live="polite"></div>
+    </section>
+
+    <section class="block">
+      <div class="lbl">Раскладка</div>
+      <div class="seg" id="template">
+        <button data-v="title" class="active">Под заголовок</button>
+        <button data-v="offset">Со смещением</button>
+        <button data-v="packed">Собранно</button>
+      </div>
+      <label class="check"><input type="checkbox" id="with-bg" checked> Добавлять фоновые объекты</label>
+      <label class="check"><input type="checkbox" id="guide" checked> Показывать место под заголовок</label>
+    </section>
+
+    <section class="block">
+      <div class="lbl">Размер иллюстраций</div>
+      <div class="seg" id="size">
+        <button data-v="L" class="active">L · детальные</button>
+        <button data-v="S">S · упрощённые</button>
+      </div>
+      <div class="lbl">Формат</div>
+      <select id="format">
+        <option value="1200x630">1200 × 630 · соцсети, обложка статьи</option>
+        <option value="1080x1080">1080 × 1080 · квадрат</option>
+        <option value="1080x1350">1080 × 1350 · вертикальный пост</option>
+        <option value="1920x1080">1920 × 1080 · баннер, слайд</option>
+      </select>
+    </section>
+
+    <section class="block">
+      <div class="lbl">Цветовая схема</div>
+      <div class="palettes" id="palettes"></div>
+      <div class="row">
+        <label class="btn file">Загрузить палитру (.json)<input type="file" id="palette-file" accept=".json,application/json" hidden></label>
+        <a class="link" href="library/palette-example.json" download>пример файла</a>
+      </div>
+      <div id="palette-msg" class="hint"></div>
+    </section>
+  </aside>
+
+  <!-- Холст -->
+  <section class="stage">
+    <div class="stage-bar">
+      <span id="format-label">1200 × 630</span>
+      <span class="sep">·</span>
+      <span id="count-label">0 объектов</span>
+      <span class="spacer"></span>
+      <span class="hint">Перетаскивайте объекты · круг сверху — поворот · угол — масштаб · Delete, Ctrl+D, [ ]</span>
+    </div>
+    <div class="canvas-wrap" id="canvas-wrap">
+      <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+        <g id="scene"></g>
+        <g id="guides" pointer-events="none"></g>
+        <g id="overlay"></g>
+      </svg>
+    </div>
+    <div class="toolbar" id="toolbar">
+      <button class="btn" data-act="dup" title="Ctrl+D">Дублировать</button>
+      <button class="btn" data-act="rotL" title="Повернуть на −15°">⟲ 15°</button>
+      <button class="btn" data-act="rotR" title="Повернуть на +15°">⟳ 15°</button>
+      <button class="btn" data-act="up" title="]">Выше</button>
+      <button class="btn" data-act="down" title="[">Ниже</button>
+      <button class="btn" data-act="kind">Основной ⇄ фоновый</button>
+      <button class="btn danger" data-act="del" title="Delete">Удалить</button>
+    </div>
+  </section>
+
+  <!-- Правая панель: библиотека и слои -->
+  <aside class="panel right">
+    <section class="block">
+      <div class="lbl">Библиотека <span class="muted" id="lib-size">L</span></div>
+      <div class="lib-kind seg small" id="lib-kind">
+        <button data-v="main" class="active">Главные</button>
+        <button data-v="bg">Фоновые</button>
+      </div>
+      <div class="library" id="library"></div>
+      <p class="hint">Нажмите на объект, чтобы добавить его на холст.</p>
+    </section>
+    <section class="block">
+      <div class="lbl">Слои <span class="muted">(сверху — передний план)</span></div>
+      <ol class="layers" id="layers"></ol>
+    </section>
+  </aside>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
