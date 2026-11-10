@@ -58,7 +58,7 @@
 Сервис статический (HTML + CSS + JS без фреймворков и сборки), поэтому работает с GitHub Pages и открывается по ссылке.
 
 ```
-app/
+snapbuild-test/
 ├── index.html, style.css, app.js     интерфейс и логика
 ├── library/
 │   ├── L/*.svg, S/*.svg               20 объектов в каждом размере (главные + фоновые)
@@ -116,7 +116,7 @@ app/
 ## Запуск локально
 
 ```bash
-cd app
+cd snapbuild-test
 python -m http.server 8000
 # открыть http://localhost:8000
 ```
