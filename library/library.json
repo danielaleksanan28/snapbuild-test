@@ -1,0 +1,786 @@
+{
+ "objects": {
+  "book": {
+   "name": "Книга",
+   "tags": [
+    "книга",
+    "учёба",
+    "обучение",
+    "знания",
+    "чтение",
+    "история",
+    "литература",
+    "образование",
+    "курс",
+    "инструкция",
+    "правила",
+    "библиотека",
+    "школа",
+    "университет"
+   ]
+  },
+  "phone": {
+   "name": "Телефон",
+   "tags": [
+    "телефон",
+    "смартфон",
+    "приложение",
+    "мобильный",
+    "связь",
+    "звонок",
+    "сообщение",
+    "онлайн",
+    "интернет",
+    "соцсети",
+    "уведомление",
+    "цифровой",
+    "сервис"
+   ]
+  },
+  "puzzle": {
+   "name": "Пазл",
+   "tags": [
+    "пазл",
+    "решение",
+    "задача",
+    "головоломка",
+    "команда",
+    "партнёрство",
+    "интеграция",
+    "совместимость",
+    "логика",
+    "стратегия",
+    "идея",
+    "сотрудничество"
+   ]
+  },
+  "coin": {
+   "name": "Монета",
+   "tags": [
+    "монета",
+    "деньги",
+    "финансы",
+    "оплата",
+    "экономия",
+    "инвестиции",
+    "доход",
+    "бюджет",
+    "цена",
+    "кэшбэк",
+    "бонус",
+    "банк",
+    "налог",
+    "прибыль"
+   ]
+  },
+  "headphones": {
+   "name": "Наушники",
+   "tags": [
+    "наушники",
+    "музыка",
+    "звук",
+    "подкаст",
+    "аудио",
+    "поддержка",
+    "слушать",
+    "колл-центр",
+    "концентрация",
+    "отдых",
+    "вебинар"
+   ]
+  },
+  "lamp": {
+   "name": "Лампа",
+   "tags": [
+    "лампа",
+    "идея",
+    "свет",
+    "работа",
+    "рабочее место",
+    "вдохновение",
+    "ночь",
+    "учёба",
+    "креатив",
+    "фокус",
+    "дом",
+    "уют"
+   ]
+  },
+  "flowers": {
+   "name": "Цветы в вазе",
+   "tags": [
+    "цветы",
+    "ваза",
+    "подарок",
+    "праздник",
+    "весна",
+    "забота",
+    "благодарность",
+    "красота",
+    "уют",
+    "дом",
+    "8 марта",
+    "поздравление",
+    "отношения"
+   ]
+  },
+  "wallet": {
+   "name": "Кошелёк",
+   "tags": [
+    "кошелёк",
+    "деньги",
+    "финансы",
+    "покупки",
+    "оплата",
+    "экономия",
+    "бюджет",
+    "карта",
+    "шопинг",
+    "расходы",
+    "зарплата",
+    "банк"
+   ]
+  },
+  "folder": {
+   "name": "Папка",
+   "tags": [
+    "папка",
+    "документы",
+    "архив",
+    "файлы",
+    "офис",
+    "бумаги",
+    "договор",
+    "отчёт",
+    "бюрократия",
+    "работа",
+    "проект",
+    "организация",
+    "хранение"
+   ]
+  },
+  "pen": {
+   "name": "Ручка",
+   "tags": [
+    "ручка",
+    "письмо",
+    "подпись",
+    "договор",
+    "заметки",
+    "текст",
+    "творчество",
+    "учёба",
+    "экзамен",
+    "редактура",
+    "автограф",
+    "блог"
+   ]
+  }
+ },
+ "items": [
+  {
+   "id": "puzzle-main-L",
+   "object": "puzzle",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/puzzle-main.svg",
+   "width": 548.16,
+   "height": 317.54,
+   "colors": [
+    "#181817",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Пазлы"
+  },
+  {
+   "id": "puzzle-bg-L",
+   "object": "puzzle",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/puzzle-bg.svg",
+   "width": 548.16,
+   "height": 317.53,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Пазлы_2"
+  },
+  {
+   "id": "book-main-L",
+   "object": "book",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/book-main.svg",
+   "width": 1449.89,
+   "height": 980.67,
+   "colors": [
+    "#181817",
+    "#F9A3AA",
+    "#F9ECB0",
+    "#FFE3E1",
+    "WHITE"
+   ],
+   "figmaLayer": "Книга"
+  },
+  {
+   "id": "book-bg-L",
+   "object": "book",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/book-bg.svg",
+   "width": 1449.89,
+   "height": 980.66,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Книга_2"
+  },
+  {
+   "id": "phone-main-L",
+   "object": "phone",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/phone-main.svg",
+   "width": 800.53,
+   "height": 465.67,
+   "colors": [
+    "#181817",
+    "#7864D7",
+    "#D7CDF5",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Телефон"
+  },
+  {
+   "id": "phone-bg-L",
+   "object": "phone",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/phone-bg.svg",
+   "width": 800.53,
+   "height": 465.67,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Телефон_2"
+  },
+  {
+   "id": "headphones-main-L",
+   "object": "headphones",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/headphones-main.svg",
+   "width": 892.15,
+   "height": 695.54,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Наушники"
+  },
+  {
+   "id": "headphones-bg-L",
+   "object": "headphones",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/headphones-bg.svg",
+   "width": 892.15,
+   "height": 695.54,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Наушники_2"
+  },
+  {
+   "id": "lamp-main-L",
+   "object": "lamp",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/lamp-main.svg",
+   "width": 949.94,
+   "height": 1132.99,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Лампа"
+  },
+  {
+   "id": "lamp-bg-L",
+   "object": "lamp",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/lamp-bg.svg",
+   "width": 949.94,
+   "height": 1132.98,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Лампа_2"
+  },
+  {
+   "id": "wallet-main-L",
+   "object": "wallet",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/wallet-main.svg",
+   "width": 634.42,
+   "height": 400.31,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Кошелек"
+  },
+  {
+   "id": "wallet-bg-L",
+   "object": "wallet",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/wallet-bg.svg",
+   "width": 634.42,
+   "height": 400.31,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Кошелек_2"
+  },
+  {
+   "id": "pen-main-L",
+   "object": "pen",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/pen-main.svg",
+   "width": 512.43,
+   "height": 289.4,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Ручка"
+  },
+  {
+   "id": "pen-bg-L",
+   "object": "pen",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/pen-bg.svg",
+   "width": 512.43,
+   "height": 289.36,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Ручка_2"
+  },
+  {
+   "id": "folder-main-L",
+   "object": "folder",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/folder-main.svg",
+   "width": 1244.62,
+   "height": 662.58,
+   "colors": [
+    "#181817",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Папка"
+  },
+  {
+   "id": "folder-bg-L",
+   "object": "folder",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/folder-bg.svg",
+   "width": 1244.62,
+   "height": 662.61,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Папка_2"
+  },
+  {
+   "id": "coin-main-L",
+   "object": "coin",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/coin-main.svg",
+   "width": 290.68,
+   "height": 192.5,
+   "colors": [
+    "#181817",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Монета"
+  },
+  {
+   "id": "coin-bg-L",
+   "object": "coin",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/coin-bg.svg",
+   "width": 290.68,
+   "height": 192.5,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Монета_2"
+  },
+  {
+   "id": "flowers-main-L",
+   "object": "flowers",
+   "kind": "main",
+   "size": "L",
+   "file": "library/L/flowers-main.svg",
+   "width": 594.57,
+   "height": 751.11,
+   "colors": [
+    "#181817",
+    "#AA9BF0",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Group 2136136344"
+  },
+  {
+   "id": "flowers-bg-L",
+   "object": "flowers",
+   "kind": "bg",
+   "size": "L",
+   "file": "library/L/flowers-bg.svg",
+   "width": 594.57,
+   "height": 751.11,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Group 2136136347"
+  },
+  {
+   "id": "flowers-main-S",
+   "object": "flowers",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/flowers-main.svg",
+   "width": 327.27,
+   "height": 412.95,
+   "colors": [
+    "#181817",
+    "#AA9BF0",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Group 2136136345"
+  },
+  {
+   "id": "flowers-bg-S",
+   "object": "flowers",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/flowers-bg.svg",
+   "width": 327.27,
+   "height": 412.95,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Group 2136136346"
+  },
+  {
+   "id": "book-main-S",
+   "object": "book",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/book-main.svg",
+   "width": 726.95,
+   "height": 492.33,
+   "colors": [
+    "#181817",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Group 2136136335"
+  },
+  {
+   "id": "phone-main-S",
+   "object": "phone",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/phone-main.svg",
+   "width": 402.26,
+   "height": 234.84,
+   "colors": [
+    "#181817",
+    "#7864D7",
+    "#D7CDF5",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Телефон"
+  },
+  {
+   "id": "puzzle-main-S",
+   "object": "puzzle",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/puzzle-main.svg",
+   "width": 276.08,
+   "height": 160.76,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Пазлы"
+  },
+  {
+   "id": "coin-main-S",
+   "object": "coin",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/coin-main.svg",
+   "width": 156.4,
+   "height": 104.2,
+   "colors": [
+    "#181817",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Монета"
+  },
+  {
+   "id": "headphones-main-S",
+   "object": "headphones",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/headphones-main.svg",
+   "width": 448.07,
+   "height": 349.77,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "WHITE"
+   ],
+   "figmaLayer": "Наушники"
+  },
+  {
+   "id": "lamp-main-S",
+   "object": "lamp",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/lamp-main.svg",
+   "width": 476.97,
+   "height": 568.49,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "#F9A3AA",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Лампа"
+  },
+  {
+   "id": "folder-main-S",
+   "object": "folder",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/folder-main.svg",
+   "width": 624.31,
+   "height": 333.29,
+   "colors": [
+    "#181817",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Group 2136136337"
+  },
+  {
+   "id": "pen-main-S",
+   "object": "pen",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/pen-main.svg",
+   "width": 258.21,
+   "height": 146.7,
+   "colors": [
+    "#181817",
+    "#F9A3AA",
+    "WHITE"
+   ],
+   "figmaLayer": "Group 2136136336"
+  },
+  {
+   "id": "wallet-main-S",
+   "object": "wallet",
+   "kind": "main",
+   "size": "S",
+   "file": "library/S/wallet-main.svg",
+   "width": 319.21,
+   "height": 202.15,
+   "colors": [
+    "#181817",
+    "#D7CDF5",
+    "#F9ECB0",
+    "WHITE"
+   ],
+   "figmaLayer": "Кошелек"
+  },
+  {
+   "id": "book-bg-S",
+   "object": "book",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/book-bg.svg",
+   "width": 726.95,
+   "height": 492.33,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Group 2136136341"
+  },
+  {
+   "id": "phone-bg-S",
+   "object": "phone",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/phone-bg.svg",
+   "width": 402.26,
+   "height": 234.84,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Телефон_2"
+  },
+  {
+   "id": "puzzle-bg-S",
+   "object": "puzzle",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/puzzle-bg.svg",
+   "width": 276.08,
+   "height": 160.77,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Пазлы_2"
+  },
+  {
+   "id": "coin-bg-S",
+   "object": "coin",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/coin-bg.svg",
+   "width": 156.39,
+   "height": 104.21,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Монета_2"
+  },
+  {
+   "id": "headphones-bg-S",
+   "object": "headphones",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/headphones-bg.svg",
+   "width": 448.07,
+   "height": 349.77,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Наушники_2"
+  },
+  {
+   "id": "lamp-bg-S",
+   "object": "lamp",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/lamp-bg.svg",
+   "width": 476.97,
+   "height": 568.49,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Лампа_2"
+  },
+  {
+   "id": "folder-bg-S",
+   "object": "folder",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/folder-bg.svg",
+   "width": 624.31,
+   "height": 333.3,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Group 2136136342"
+  },
+  {
+   "id": "pen-bg-S",
+   "object": "pen",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/pen-bg.svg",
+   "width": 258.21,
+   "height": 146.7,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Group 2136136343"
+  },
+  {
+   "id": "wallet-bg-S",
+   "object": "wallet",
+   "kind": "bg",
+   "size": "S",
+   "file": "library/S/wallet-bg.svg",
+   "width": 319.21,
+   "height": 202.16,
+   "colors": [
+    "#7864D7",
+    "#D7CDF5"
+   ],
+   "figmaLayer": "Кошелек_2"
+  }
+ ]
+}

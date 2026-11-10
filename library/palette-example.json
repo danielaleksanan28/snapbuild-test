@@ -1,0 +1,7 @@
+{
+  "name": "Лимон",
+  "background": ["#FFF1B8", "#FFD95E", "#D99A00"],
+  "objects": ["#9AD0FF", "#FF7A8A", "#D8F0FF"],
+  "ink": "#181817",
+  "paper": "#FFFFFF"
+}
